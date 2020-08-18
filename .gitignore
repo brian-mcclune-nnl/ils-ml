@@ -132,6 +132,9 @@ dmypy.json
 *.code-workspace
 .vscode/settings.json
 
+# TensorFlow log files
+logs/fit/
+
 # Test files
 rps-test-set/
 
