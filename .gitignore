@@ -134,3 +134,6 @@ dmypy.json
 
 # Test files
 rps-test-set/
+
+# Package binary files
+janken/data/*.h5
