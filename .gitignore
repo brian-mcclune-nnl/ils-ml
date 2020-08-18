@@ -131,3 +131,6 @@ dmypy.json
 # VS Code files
 *.code-workspace
 .vscode/settings.json
+
+# Test files
+rps-test-set/
