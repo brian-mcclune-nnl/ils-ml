@@ -28,6 +28,7 @@ setup(
     install_requires=[
         'pandas',
         'scipy==1.4.1',
+        'tabulate',
         'tensorboard==2.1.0',
         'tensorflow==2.1.0',
     ],
