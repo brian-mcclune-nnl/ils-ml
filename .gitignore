@@ -138,8 +138,5 @@ logs/fit/
 # Test files
 rps-test-set/
 
-# Package binary files
-janken/data/*.h5
-
 # Track pyinstaller spec file
 !janken_pyinstaller.spec
