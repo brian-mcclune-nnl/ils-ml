@@ -140,3 +140,7 @@ rps-test-set/
 
 # Track pyinstaller spec file
 !janken_pyinstaller.spec
+
+# Sphinx build files
+doc/_build/
+!doc/_build/.gitkeep
