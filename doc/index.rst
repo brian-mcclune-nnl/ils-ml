@@ -12,7 +12,7 @@ Welcome to Janken's documentation!
 
    background
    architecture
-
+   packaging
 
 
 Indices and tables
