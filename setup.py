@@ -1,5 +1,7 @@
 """Janken setup script."""
 
+import subprocess
+
 from setuptools import setup
 
 
@@ -11,7 +13,10 @@ def get_version() -> str:
 
     """
 
-    return '0.0.1'
+    return subprocess.run(
+        ['git', 'describe'],
+        stdout=subprocess.POPEN,
+    ).stdout.decode().rstrip().lstrip('v')
 
 
 setup(

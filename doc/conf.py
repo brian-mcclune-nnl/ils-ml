@@ -22,7 +22,11 @@ copyright = '2020, Brian McClune'
 author = 'Brian McClune'
 
 # The full version, including alpha/beta/rc tags
-release = '0.0.1'
+import subprocess
+release = subprocess.run(
+    ['git', 'describe'],
+    stdout=subprocess.PIPE,
+).stdout.decode().rstrip().lstrip('v')
 
 
 # -- General configuration ---------------------------------------------------
