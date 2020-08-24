@@ -43,8 +43,8 @@ def predict(images, labels=('rock', 'paper', 'scissors')):
     predicted_labels = [
         labels[idx] for idx in tf.math.argmax(predictions, axis=1)
     ]
-    df = pd.DataFrame(data={
-        'images': images,
-        'labels': predicted_labels,
-    })
+    data = {'image': images}
+    data.update({labels[idx]: predictions[:, idx] for idx in range(3)})
+    data['label'] = predicted_labels
+    df = pd.DataFrame(data=data)
     print(df.to_markdown(tablefmt='grid', index=False))
