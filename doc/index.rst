@@ -12,7 +12,9 @@ Welcome to Janken's documentation!
 
    background
    architecture
+   training
    packaging
+   using
 
 
 Indices and tables
