@@ -10,6 +10,8 @@ Welcome to Janken's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   background
+
 
 
 Indices and tables
