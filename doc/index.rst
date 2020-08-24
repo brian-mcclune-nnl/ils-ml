@@ -11,6 +11,7 @@ Welcome to Janken's documentation!
    :caption: Contents:
 
    background
+   architecture
 
 
 
