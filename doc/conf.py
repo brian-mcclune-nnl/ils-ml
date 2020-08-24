@@ -24,9 +24,9 @@ author = 'Brian McClune'
 # The full version, including alpha/beta/rc tags
 import subprocess
 release = subprocess.run(
-    ['git', 'describe'],
+    ['git', 'describe', '--long'],
     stdout=subprocess.PIPE,
-).stdout.decode().rstrip().lstrip('v')
+).stdout.decode().rstrip().lstrip('v').split('-')[0]
 
 
 # -- General configuration ---------------------------------------------------

@@ -14,9 +14,9 @@ def get_version() -> str:
     """
 
     return subprocess.run(
-        ['git', 'describe'],
+        ['git', 'describe', '--long'],
         stdout=subprocess.POPEN,
-    ).stdout.decode().rstrip().lstrip('v')
+    ).stdout.decode().rstrip().lstrip('v').split('-')[0]
 
 
 setup(
