@@ -31,6 +31,7 @@ setup(
     entry_points={'console_scripts': ['janken = janken.__main__:main']},
     include_package_data=True,
     install_requires=[
+        'gooey',
         'pandas',
         'scipy==1.4.1',
         'tabulate',
