@@ -20,12 +20,15 @@ def predict(images, labels=('rock', 'paper', 'scissors')):
     model = pathlib.Path(__file__).parent.joinpath('data', 'janken_take_10.h5')
     model = tf.keras.models.load_model(model)
 
-    def batcher(iterable, batch_size=16, fillvalue=None):
+    batch_size = 16
+    batches = 1 + len(images) // batch_size
+
+    def batcher(iterable, batch_size=batch_size, fillvalue=None):
         args = [iter(iterable)] * batch_size
         return itertools.zip_longest(*args, fillvalue=fillvalue)
 
     predictions = []
-    for batch in batcher(images):
+    for batch_num, batch in enumerate(batcher(images)):
         image_pngs = []
         for image in batch:
             if not image:
@@ -37,6 +40,8 @@ def predict(images, labels=('rock', 'paper', 'scissors')):
             image_pngs.append(tf.expand_dims(image_png, axis=0))
 
         image_pngs = tf.concat(image_pngs, axis=0)
+
+        print(f'Running batch {batch_num + 1} of {batches}')
         predictions.append(model.predict(image_pngs))
 
     predictions = tf.concat(predictions, axis=0)

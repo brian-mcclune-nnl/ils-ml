@@ -67,6 +67,8 @@ def get_parser() -> gooey.GooeyParser:
     default_size=(960, 530),
     terminal_font_family=
         'Consolas' if sys.platform.startswith('win') else 'Lucida Sans Mono',
+    progress_regex=r'^Running batch (?P<batch>\d+) of (?P<batches>\d+)$',
+    progress_expr='batch / batches * 100',
 )
 def main():
     """Runs Janken! Tells you whether rock, paper, or scissors were thrown.
