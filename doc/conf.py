@@ -68,3 +68,5 @@ html_context = {
     'current_language': 'en',
     'languages': [('en', f'/{release}/')],
 }
+
+html_css_files = ['css/janken.css']

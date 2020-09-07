@@ -1,0 +1,15 @@
+[class^="janken-"] {
+    font-size: x-large;
+    font-weight: bold;
+    margin: auto;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.janken-header {
+    padding-bottom: 1em;
+}
+
+.janken-footer {
+    padding-top: 1em;
+}
