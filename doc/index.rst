@@ -15,7 +15,7 @@ Welcome to Janken's documentation!
    training
    packaging
    using
-
+   api
 
 Indices and tables
 ==================

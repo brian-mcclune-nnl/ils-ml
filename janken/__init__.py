@@ -1,16 +1,31 @@
 """The Janken package!
 
+Functions
+---------
+
+.. autofunction:: janken.predict
+
 """
 
 import itertools
 import pathlib
 
+from typing import List, Tuple
+
 import pandas as pd
 import tensorflow as tf
 
 
-def predict(images, labels=('rock', 'paper', 'scissors')):
-    """Handle prediction for an input image or list of images.
+def predict(
+    images: List[str],
+    labels: Tuple[str, str, str] = ('rock', 'paper', 'scissors')):
+    """Handle prediction for a list of input `images`.
+
+    Arguments:
+        images: The input images to classify.
+        labels: The labels to apply as part of classification. Optionally
+            modifiable to support other expressions of equivalent meaning
+            to rock, paper, and scissors (e.g. guu, paa, choki).
 
     """
 
