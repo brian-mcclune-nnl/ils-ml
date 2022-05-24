@@ -36,7 +36,7 @@ setup(
         'scipy==1.4.1',
         'tabulate',
         'tensorboard==2.1.0',
-        'tensorflow==2.1.0',
+        'tensorflow==2.6.4',
     ],
     classifiers=[
         'Development Status :: 3 - Alpha',
